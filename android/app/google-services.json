@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "712647840871",
+    "firebase_url": "https://vision-bmg.firebaseio.com",
+    "project_id": "vision-bmg",
+    "storage_bucket": "vision-bmg.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:712647840871:android:25a830f9b83ae3d93db0c2",
+        "android_client_info": {
+          "package_name": "bmg.poc.vision"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "712647840871-arp7fsi7n6mllp4lubhs14o9qgro0872.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuH26dIRBajt-zeLq785WvKW55HCvh1Vw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "712647840871-arp7fsi7n6mllp4lubhs14o9qgro0872.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -23,6 +23,11 @@ class _MyFaceDetectorViewState extends State<MyFaceDetectorView> {
             icon: Icon(Icons.add_a_photo),
             onPressed: () async => pickImage(),
           ),
+
+          IconButton(
+            icon: Icon(Icons.movie),
+            onPressed: () async => record(),
+          ),
         ],
       ),
       body: myFaceView(),
@@ -39,21 +44,21 @@ class _MyFaceDetectorViewState extends State<MyFaceDetectorView> {
             child: this._imageFile == null ? Placeholder() : Image.file(this._imageFile),
           ),
           RaisedButton(
-            child: Text('Escanear'),
+            child: Text('Escanear foto'),
             onPressed: () {
                FaceDetectorController faceDetec = FaceDetectorController();
                faceDetec.pickImage(_imageFile);
+
             },
           ),
 
-          Column(
-            children: <Widget>[
-              Text('Teste'),
-              Text('Teste'),
-              Text('Teste'),
-              Text('Teste'),
-            ],
-          )
+          RaisedButton(
+            child: Text('Escanear video'),
+            onPressed: () {
+              FaceDetectorController faceDetec = FaceDetectorController();
+              faceDetec.pickImage(_imageFile);
+              },
+          ),
         ],
       ),
     );
@@ -61,6 +66,12 @@ class _MyFaceDetectorViewState extends State<MyFaceDetectorView> {
 
   pickImage()async{
     final PickedFile pickedFile = await _picker.getImage(source: ImageSource.camera);
+    setState(() {
+      this._imageFile = File(pickedFile.path);
+    });
+  }
+  record()async{
+    final PickedFile pickedFile = await _picker.getVideo(source: ImageSource.camera);
     setState(() {
       this._imageFile = File(pickedFile.path);
     });

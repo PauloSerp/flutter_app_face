@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_app_face/camera_face_detector.dart';
+import 'package:flutter_app_face/face_detection_image.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -13,6 +14,15 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            RaisedButton(
+                child: Text('Add Smile to Face from Image'),
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => FaceDetectionFromImage(),
+                    ),
+                  );
+                }),
             RaisedButton(
                 child: Text('Add Smile to Face from Live Camera'),
                 onPressed: () {
